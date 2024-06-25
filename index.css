@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #0648af;
+  --secondary-color: #fffaf2;
+  --btn-color: #0648af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--btn-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-submit:hover {
+  background-color: var(--btn-color-hover);
+  transform: translateY(-2px);
+  color: black;
+}
+
+.btn:hover {
+  background-color: darken(var(--btn-color), 10%);
+  transform: scale(1.05);
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader-content {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+header {
+  background-image: url("HOP\ WTR.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.free-shipping {
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(6, 72, 175, 0.8);
+}
+
+.logo img {
+  height: 30px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+
+.nav-menu li a:hover {
+  color: black;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  margin-top: 650px;
+  font-weight: 700;
+}
+
+.explore-btn {
+  font-size: 16px;
+  padding: 15px 30px;
+}
+
+#product-showcase img {
+  width: 100%;
+  height: auto;
+}
+
+.about {
+  background-color: var(--secondary-color);
+  padding: 80px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product {
+  padding: 80px 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.product h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.product img {
+  max-width: 200px;
+  margin: 30px 0;
+}
+
+.product p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 50px;
+  background-color: #f9f9f9;
+}
+
+.contact form {
+  flex: 2;
+  padding-right: 50px;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.contact-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.newsletter h3 {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.newsletter input {
+  flex: 2;
+  padding: 12px;
+  margin: 0 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.social-links {
+  margin-bottom: 30px;
+}
+
+.social-links h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  margin: 0 10px 0px 0px;
+}
+
+.social-links img {
+  height: 30px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-links .column {
+  flex: 1;
+}
+
+.footer-links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: font-weight 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.copyright {
+  font-size: 0.9rem;
+}
+
+@keyframes slideIn {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.form-success {
+  position: fixed;
+  top: 20px;
+  right: -300px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s forwards, fadeOut 1s 3s forwards;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .about,
+  .contact {
+    flex-direction: column;
+  }
+
+  .about-content,
+  .about-image,
+  .contact form,
+  .contact-info {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links .column {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .nav-menu {
+    flex-basis: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .about,
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .product {
+    padding: 40px 20px;
+  }
+
+  .product img {
+    max-width: 150px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  .newsletter,
+  .social-links,
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .social-links a {
+    margin: 0 5px;
+  }
+
+  .footer-links .column {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .explore-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .about-content h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .product h3 {
+    font-size: 1.5rem;
+  }
+
+  .product img {
+    max-width: 120px;
+  }
+}
